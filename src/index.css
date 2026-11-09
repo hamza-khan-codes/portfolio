@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-accent: #38bdf8;
+  --color-accent-hover: #0ea5e9;
+  --color-accent-soft: #0c4a6e;
+
+  /* Background */
+  --color-background: #0c1018;
+  --color-surface: #171c27;
+  --color-surface-hover: #202735;
+  --color-surface-dark: #090d14;
+
+  /* Text */
+  --color-heading: #f1f5f9;
+  --color-body: #a1aab8;
+  --color-muted: #687386;
+
+  /* Borders */
+  --color-border: #252d3b;
+
+  /* Typography */
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Shadows */
+  --shadow-glow: 0 0 35px rgb(56 189 248 / 12%);
+  --shadow-card: 0 15px 40px rgb(0 0 0 / 20%);
+
+  /* Radius */
+  --radius-card: 12px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-body text-body antialiased;
+  }
+
+  button,
+  a {
+    @apply transition-all duration-200;
+  }
+
+  ::selection {
+    @apply bg-accent text-background;
+  }
+}
