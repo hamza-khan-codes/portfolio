@@ -21,14 +21,14 @@ function CTA() {
 
             <div className="flex flex-wrap gap-3">
                 <Link
-                    to="/contact"
+                    to="/portfolio/contact"
                     className="flex items-center gap-3 rounded-md bg-accent px-5 py-4 text-sm font-bold text-background hover:bg-accent-hover"
                 >
                     Schedule a Discussion <FiArrowUpRight />
                 </Link>
 
                 <a
-                    href="mailto:your-email@example.com"
+                    href="mailto:hamzakhanlabs.com"
                     className="flex items-center gap-2 rounded-md bg-background px-5 py-4 text-sm text-heading hover:bg-surface-hover"
                 >
                     Email Me <FiMail />

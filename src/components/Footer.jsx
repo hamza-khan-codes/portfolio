@@ -21,9 +21,9 @@ function Footer() {
                 </div>
 
                 <div className="flex items-center gap-6 text-xs text-muted">
-                    <Link to="/about">About</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/portfolio/about">About</Link>
+                    <Link to="/portfolio/projects">Projects</Link>
+                    <Link to="/portfolio/contact">Contact</Link>
                 </div>
 
                 <div className="flex gap-5 text-lg text-muted">
@@ -40,7 +40,7 @@ function Footer() {
                     </a>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
 

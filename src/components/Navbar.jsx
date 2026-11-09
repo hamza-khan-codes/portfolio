@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
 
 const links = [
-    { name: "Overview", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Tech Stack", path: "/skills" },
-    { name: "Contact", path: "/contact" },
+    { name: "Overview", path: "/portfolio/" },
+    { name: "About", path: "/portfolio/about" },
+    { name: "Projects", path: "/portfolio/projects" },
+    { name: "Tech Stack", path: "/portfolio/skills" },
+    { name: "Contact", path: "/portfolio/contact" },
 ];
 
 function Navbar() {
@@ -46,38 +46,40 @@ function Navbar() {
 
                 <div className="hidden md:block">
                     <NavLink
-                        to="/contact"
-                        className="flex items-center gap-2 rounded-md bg-surface px-4 py-2 text-xs text-heading hover:bg-surface-hover"
+                        to="/portfolio/contact"
+                    className="flex items-center gap-2 rounded-md bg-surface px-4 py-2 text-xs text-heading hover:bg-surface-hover"
                     >
-                        Let's Talk <FiArrowUpRight />
+                    Let's Talk <FiArrowUpRight />
+                </NavLink>
+            </div>
+
+            <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-xl text-heading md:hidden"
+                aria-label="Toggle navigation"
+            >
+                {menuOpen ? <FiX /> : <FiMenu />}
+            </button>
+        </nav>
+
+            {
+        menuOpen && (
+            <div className="absolute left-0 top-full w-full border-b border-border bg-surface p-5 md:hidden">
+                {links.map((link) => (
+                    <NavLink
+                        key={link.path}
+                        to={link.path}
+                        end={link.path === "/"}
+                        onClick={() => setMenuOpen(false)}
+                        className="block border-b border-border py-4 text-sm text-heading"
+                    >
+                        {link.name}
                     </NavLink>
-                </div>
-
-                <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="text-xl text-heading md:hidden"
-                    aria-label="Toggle navigation"
-                >
-                    {menuOpen ? <FiX /> : <FiMenu />}
-                </button>
-            </nav>
-
-            {menuOpen && (
-                <div className="absolute left-0 top-full w-full border-b border-border bg-surface p-5 md:hidden">
-                    {links.map((link) => (
-                        <NavLink
-                            key={link.path}
-                            to={link.path}
-                            end={link.path === "/"}
-                            onClick={() => setMenuOpen(false)}
-                            className="block border-b border-border py-4 text-sm text-heading"
-                        >
-                            {link.name}
-                        </NavLink>
-                    ))}
-                </div>
-            )}
-        </header>
+                ))}
+            </div>
+        )
+    }
+        </header >
     );
 }
 

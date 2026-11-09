@@ -46,14 +46,14 @@ function Home() {
 
                 <div className="mt-8 flex flex-wrap gap-3">
                     <Link
-                        to="/projects"
+                        to="/portfolio/projects"
                         className="flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-xs font-bold text-background hover:bg-accent-hover"
                     >
                         View Selected Work <FiArrowUpRight />
                     </Link>
 
                     <Link
-                        to="/about"
+                        to="/portfolio/about"
                         className="flex items-center gap-2 rounded-md bg-surface px-5 py-3 text-xs font-medium text-heading hover:bg-surface-hover"
                     >
                         Explore My Story <FiArrowUpRight />
@@ -116,7 +116,7 @@ function Home() {
                 </div>
 
                 <Link
-                    to="/projects"
+                    to="/portfolio/projects"
                     className="mt-8 inline-flex items-center gap-2 text-xs font-semibold text-accent hover:text-heading"
                 >
                     Explore All Projects <FiArrowUpRight />
