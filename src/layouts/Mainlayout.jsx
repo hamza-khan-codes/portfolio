@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function MainLayout() {
+function Mainlayout() {
     return (
         <div className="min-h-screen">
             <Navbar />
@@ -16,4 +16,4 @@ function MainLayout() {
     );
 }
 
-export default MainLayout;
+export default Mainlayout;
