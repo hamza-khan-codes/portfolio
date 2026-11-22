@@ -4,10 +4,10 @@ import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
 
 const links = [
     { name: "Overview", path: "/portfolio/" },
-    { name: "About", path: "/portfolio/about" },
-    { name: "Projects", path: "/portfolio/projects" },
-    { name: "Tech Stack", path: "/portfolio/skills" },
-    { name: "Contact", path: "/portfolio/contact" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Tech Stack", path: "/skills" },
+    { name: "Contact", path: "/contact" },
 ];
 
 function Navbar() {
